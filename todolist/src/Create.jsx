@@ -12,7 +12,7 @@ function Create() {
     const handleAdd = () => {
       if (typeof task === 'string' && task.trim() !== '') { // Check if task is not empty (after trimming whitespace)
           axios.post('http://localhost:3001/add', { task: task })
-              .then(result => console.log(result))
+              .then(result =>  {location.reload()} )
               .catch(err => console.error(err));
       } else {
           console.log('Task input is empty. Please enter a task.');
